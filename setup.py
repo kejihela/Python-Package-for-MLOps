@@ -4,6 +4,10 @@ from typing import List
 
 HYPEN_E_DOT='-e .'
 
+with open('README.md', 'r', encoding='utf-8') as f:
+    long_description = f.read()     
+    
+
 def get_requirement(file_path:str)->List[str]:
     requirements=[]
     with open(file_path) as f:
