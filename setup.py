@@ -4,9 +4,9 @@ from typing import List
 
 HYPEN_E_DOT='-e .'
 
-def get_requirement(file path:str)->List[str]:
+def get_requirement(file_path:str)->List[str]:
     requirements=[]
-    with open(filepath) as f:
+    with open(file_path) as f:
         requirements=f.readlines()
         requirements=[req.replace("\n","")for req in requirements]
 
