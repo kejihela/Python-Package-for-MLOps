@@ -1,29 +1,15 @@
 from setuptools import setup, find_packages
 from typing import List
 
-
-HYPEN_E_DOT='-e .'
-
 with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()     
-    
-
-def get_requirement(file_path:str)->List[str]:
-    requirements=[]
-    with open(file_path) as f:
-        requirements=f.readlines()
-        requirements=[req.replace("\n","")for req in requirements]
-
-        if HYPEN_E_DOT in requirements:
-            requirements.remove(HYPEN_E_DOT)
-    return requirements    
    
 
 __version__ = "0.0.4"
-REPO_NAME = "Python-Package-for-MLOps"
-PKG_NAME= "MongoDataBase_Connection"
-AUTHOR_USER_NAME = "Kejihela"
-AUTHOR_EMAIL = "Gleebayour@gmail.com"
+REPO_NAME = "mongodbconnectorpkg"
+PKG_NAME= "DB_Automation"
+AUTHOR_USER_NAME = "Keji_Adebayo"
+AUTHOR_EMAIL = "Gleebayour@gmail.com "
 
 setup(
     name=PKG_NAME,
@@ -39,5 +25,7 @@ setup(
     },
     package_dir={"": "src"},
     packages=find_packages(where="src"),
-    install_requires=get_requirement("./requirements_dev.txt"),
     )
+
+
+
